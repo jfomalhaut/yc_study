@@ -9,3 +9,6 @@
 	$ git add .  	업로드 할 파일을 선정해서 올리는 작업
 	$ git commit -m "message"
 	$ git push		올리는 작업
+
+	확인
+	
