@@ -1,0 +1,132 @@
+<html>
+<head>
+	<style>
+		* { margin: 0; padding: 0;}
+		.header {
+			height: 350px;
+			background: yellowgreen;
+		}
+		.top {
+			height: 250px;
+			background: tomato;
+		}
+		.topInner {
+			height: 250px;
+			width: 990px;
+			margin: 0 auto;
+			background: orange;
+		}
+		.bottom {
+			height: 100px;
+			background: skyblue;
+		}
+		.bottomInner {
+			height: 100px;
+			width: 990px;
+			margin: 0 auto;
+			background: navy;
+		}
+
+		.container {
+			width: 990px;
+			height: 100vh;
+			margin: 15px auto 0;
+			background: lightgray;
+		}
+		ul.menu {
+			height: 100px;
+			background: aquamarine;
+			float: left;
+		}
+		ul.menu li {
+			float: left;
+			width: 80px;
+			line-height: 100px;
+			text-align: center;
+			list-style: none;
+			font-size: 20px;
+
+			cursor: pointer;
+			user-select: none;
+			transition: .2s;
+		}
+		ul.menu li:hover {
+			color: blue;
+		}
+		ul.menu li:active {
+			color: red;
+			transform: scale(.95);
+		}
+
+		article.opt {
+			background: darkgoldenrod;
+			width: 200px;
+			height: 100px;
+			/* float을 사용하면 display block은 해제된다 */
+			float: right;
+		}
+
+		.container section.sec01 .left {
+			width: 600px;
+			height: 500px;
+			background: #444;
+			float: left;
+		}
+		.container section.sec01 .right {
+			width: 350px;
+			height: 500px;
+			background: #bbb;
+			float: right;
+		}
+
+		.container section.sec01 .right .rt {
+			height: 150px;
+			background: red;
+			margin-bottom: 20px;
+		}
+
+		.container section.sec01 .right .rb {
+			height: 330px;
+			background: pink;
+		}
+
+
+	</style>
+</head>
+<body>
+
+
+	<div class="header">
+
+		<div class="top">
+			<div class="topInner"></div>
+		</div>
+
+		<div class="bottom">
+			<div class="bottomInner">
+				<ul class="menu">
+					<li>메뉴1</li>
+					<li>메뉴2</li>
+					<li>메뉴3</li>
+					<li>메뉴4</li>
+					<li>메뉴5</li>
+				</ul>
+				<article class="opt"></article>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="container">
+		<section class="sec01">
+			<div class="left"></div>
+			<div class="right">
+				<div class="rt"></div>
+				<div class="rb"></div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
