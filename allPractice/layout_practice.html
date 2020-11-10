@@ -1,0 +1,124 @@
+<html>
+<head>
+    <style>
+        *{ margin  : 0; padding : 0;}
+
+        .header{
+            height: 350px;
+            background: yellowgreen;
+        }
+
+        .top{
+            height: 250px;
+            background: tomato;
+        }
+        .bottom{
+            height: 100px;
+            background: turquoise;
+        }
+        .topInner{
+            height: 250px;
+            width: 990px;
+            background: orange;
+            margin : 0 auto;
+        }
+        .bottomInner{
+            height: 100px;
+            width: 990px;
+            background: green;
+            margin: 0 auto;            
+        }
+        .container{
+            width: 990px;
+            height: 100vh;
+            margin: 15px auto;
+            background: lightgrey;
+        }
+        ul.menu{
+            height: 100px;            
+            background: lightsalmon;
+            float:left
+        }
+        ul.menu li{
+            width: 80px;
+            line-height: 100px;
+            text-align: center;
+            list-style: none;
+            font-size: 20px;
+            float: left;
+
+            cursor: pointer;
+            user-select: none;
+            transition: .2s;
+        }
+        ul.menu li:hover{
+            color: blue;
+        }
+        ul.menu li:active{
+            color: red;
+            transform:scale(.80)
+        }
+        article.opt{
+            height: 100px;
+            background: blueviolet;
+            float: right;
+            width: 200px;
+        }
+        .container section.sec01 .left{
+            height: 500px;
+            width : 600px;
+            background:chocolate;
+            float: left;
+        }
+        .container section.sec01 .right{
+            height: 500px;
+            width: 350px;
+            background: darkcyan;
+            float: right;
+        }
+
+        .container section.sec01 .right .rt{            
+            height: 150px;
+            background: red;     
+            margin-bottom: 20px;       
+        }
+        .container section.sec01 .right .rb{            
+            height: 330px;
+            background:darkorchid;           
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+
+        <div class="top">
+            <div class="topInner"></div>
+        </div>
+        <div class="bottom">
+            <div class="bottomInner">                
+                    <ul class="menu">
+                        <li>Menu1</li>
+                        <li>Menu2</li>
+                        <li>Menu3</li>
+                        <li>Menu4</li>
+                        <li>Menu5</li>                    
+                    </ul>                
+                <article class="opt"></article>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <section class="sec01">
+            <div class="left"></div>
+            <div class="right">
+                <div class="rt"></div>
+                <div class="rb"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
