@@ -1,0 +1,33 @@
+<html>
+<head>
+	<style>
+		.wrap {
+			display: flex;
+			height: 500px;
+		}
+		.wrap * {
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.wrap .menu, 
+		.wrap .side {
+			width: 200px;
+			background: lightgray;
+			flex-shrink: 0;
+		}
+		.wrap .main {
+			flex-grow: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="menu">MENU</div>
+		<div class="main">MAIN</div>
+		<div class="side">SIDE</div>
+		<!-- <nav></nav>
+		<main></main>
+		<aside></aside> -->
+	</div>
+</body>
+</html>

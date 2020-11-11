@@ -1,0 +1,34 @@
+<html>
+<head>
+	<style>
+		.box:after {
+			content: "에브리원";
+		}
+		.search {
+			font-size: 30px;
+			background: #eaeaea;
+			padding-left: 40px;
+			position: relative;
+		}
+		.search:before {
+			content: "";
+			background-image: url('https://cdn0.iconfinder.com/data/icons/30-hardware-line-icons/64/Search-512.png');
+			background-size: 30px 30px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			/* background: red; */
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			/* margin-top: -15px; */
+		}
+	</style>
+</head>
+<body>
+	<div class="search">Search...</div>
+	<img src="https://cdn0.iconfinder.com/data/icons/30-hardware-line-icons/64/Search-512.png" alt="">
+</body>
+</html>

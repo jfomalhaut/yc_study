@@ -1,0 +1,53 @@
+<html>
+<head>
+	<style>
+		#boxes {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			width: 800px;
+			margin: 0 auto;
+		}
+		#boxes div {
+			border: 1px solid;
+		}
+	</style>
+</head>
+<body>
+	<div id="boxes"></div>
+	<script>
+		const boxes = document.querySelector('#boxes');
+
+		const data = [
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '상속세', path: 'tax1'},
+			{id: 1, name: '증여세', path: 'tax1'},
+			{id: 1, name: '부가세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+			{id: 1, name: '양도세', path: 'tax1'},
+		];
+
+		let text = "", html = "";
+
+		data.forEach(element => {
+			text= `
+				<div>${element.name}</div>
+			`;
+			html += text;
+		});
+		boxes.innerHTML = html;
+	</script>
+</body>
+</html>
