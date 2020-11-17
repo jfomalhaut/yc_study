@@ -1,0 +1,21 @@
+<html>
+<body>
+	<script>
+		var nf = new Intl.NumberFormat();
+		var tax = 2000000000;
+
+		var newNumber = comma(tax);
+		var noComma = transNumber(newNumber);
+		console.log(noComma);
+
+		function comma(num) {
+			return nf.format(num);
+		}
+
+		function transNumber (str) {
+			return str.replace(/,/g, '') * 1;
+		}
+
+	</script>
+</body>
+</html>

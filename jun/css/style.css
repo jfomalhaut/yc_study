@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0;}
+body {
+	background: #646464;
+}
+.container {
+	width: 700px;
+	margin: 200px auto 0;
+	/* border: 1px solid #fff; */
+}
+.logo {
+	color: white;
+	text-align: center;
+	font-size: 100px;
+	font-weight: bold;
+}
+.field input{
+	width: 100%;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+.boxes {
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.box {
+	float: left;
+	width: calc((100% - 10px * 4) / 5);
+	height: 120px;
+	background: lightgray;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.box:nth-child(5n + 1) {
+	margin-left: 0;
+	background: tomato;
+}

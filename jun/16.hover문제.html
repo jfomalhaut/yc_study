@@ -3,19 +3,35 @@
 	<style>
 		.item {
 			width: 500px;
+			position: relative;
 		}
 		.item img {
 			width: 100%;
 		}
 		.cover {
-			background: rgba(0, 0, 0, .3);
+			position: absolute;
+			left: 0; top: 0; right: 0; bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			text-align: center;
+			padding-top: 300px;
+			box-sizing: border-box;	
+			transition: .3s;
+			opacity: 0;
+			/* display: none; */
+		}
+		.item:hover .cover {
+			opacity: .7;
+			/* background: rgba(0, 0, 0, .7); */
 		}
 	</style>
 </head>
 <body>
 	<div class="item">
 		<img src="https://i.pinimg.com/474x/b1/c9/89/b1c989e0a9a496e126d8f8e5a65472c8.jpg">
-		<div class="cover"></div>
+		<div class="cover">자세히보기</div>
 	</div>
 </body>
 </html>

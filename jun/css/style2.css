@@ -1,0 +1,8 @@
+figure {
+	width: 700px;
+	height: 500px;
+	background-image: url('../img/test.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

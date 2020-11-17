@@ -1,0 +1,45 @@
+<html>
+<head>
+	<style>
+		.container {
+			width: 800px;
+			height: 500px;
+			background: #f6f6f6;
+
+			border: 2px solid red;
+			/* border-width: 1px;
+			border-style: solid;
+			border-color: red; */
+		}
+		.box {
+			width: 200px;
+			height: 200px;
+			border-top: 30px solid blue;
+			border-right: 30px solid blue;
+			border-bottom: 30px solid #f0f0f0;
+			border-left: 30px solid #f0f0f0;
+			border-radius: 50%;
+			/* background: black; */
+			/* transition: .3s; */
+			animation-name: rotate;
+			animation-duration: .7s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.container:hover .box {
+			/* transform: translate(100px, 200px); */
+			/* transform: scale(2.11) rotate(180deg); */
+		}
+
+		@keyframes rotate {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box"></div>
+	</div>
+</body>
+</html>
