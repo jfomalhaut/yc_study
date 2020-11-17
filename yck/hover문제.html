@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        *{margin: 0; padding:0;}
+
+        .item{
+            width: 500px;
+            /* cursor: pointer; */
+        }
+        .item img{
+            width: 100%;
+        }
+        /* 100% 넣어줘야 안삐져나옴 */
+        .cover{
+            position: absolute;
+            top:0;
+            left:0;
+            width:500px;          
+            height: 722.4px; 
+            /* background: black; */
+            background: rgba(0, 0, 0, .6);
+            
+            /* 추가된 부분 */
+            opacity:0;
+            transition:all .6s linear;
+            display: block;
+        }
+        .item:hover .cover{     
+           opacity: 0.4;   
+           cursor: pointer;              
+        }      
+    </style>
+</head>
+<body>
+   <div class="item">
+       <img src="https://i.pinimg.com/474x/b1/c9/89/b1c989e0a9a496e126d8f8e5a65472c8.jpg" alt="">
+       <div class="cover"></div>
+   </div> 
+</body>
+</html>

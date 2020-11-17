@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style>
+        *{margin: 0;, padding: 0;}
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .container .box{
+            height: 300px;
+            width: 300px;
+            background: blue;
+            border: 1px solid red;
+        }
+        .container .box:nth-child(even){
+            background: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

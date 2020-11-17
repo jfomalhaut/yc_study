@@ -1,0 +1,44 @@
+<html>
+<head>
+    <style>
+        #wrapper {
+            width:200px;
+            height:280px;
+            background:#aed6e4;
+        }
+        .img-wrapper {
+            width:200px;
+            height:100%;
+            position:absolute;
+            /* cursor:pointer; */
+        }
+
+        .wrapper img{
+            width: 100%;
+        }
+
+        .darkness {
+            position:absolute;
+            top:0;
+            left:0;
+            width:inherit;
+            height:inherit;
+            background:#000000;
+            /* 추가된 부분 */
+            opacity:0;
+            transition:all .6s linear;
+        }
+        .img-wrapper:hover .darkness{
+            cursor: pointer;
+            opacity:0.4;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+  <!-- <div id="frame"> -->
+    <div class="img-wrapper img1">
+      <img src="https://i.pinimg.com/474x/b1/c9/89/b1c989e0a9a496e126d8f8e5a65472c8.jpg"/>
+      <div class="darkness"></div>
+</body>
+</html>
