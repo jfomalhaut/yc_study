@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>장바구니</title>
+    <style>
+        button{
+            font-size: 30px;
+            margin: 10px;
+        }
+        b{
+            color: red;
+        }
+        .close{
+            float: right;
+        }
+        .close:hover{
+            cursor: pointer;
+            background: lightgray;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="items">
+        <button onclick="addCart('Apple')">Apple</button>
+        <button onclick="addCart('Grape')">Grape</button>
+        <button onclick="addCart('StrawBerry')">StrawBerry</button>
+        <button onclick="addCart('Melon')">Melon</button>
+        <button onclick="addCart('Watermelon')">Watermelon</button>
+    </div>
+    <h1>
+        <span>Basket</span>
+        <b id="count">0</b>
+    </h1>
+    <h2>
+        <div id="itemList"></div>
+    </h2>
+    
+    <script>
+        var cart = [];
+        var checker = false;
+
+        function addCart(goods){
+            if(cart.length == 0){
+                console.log(goods+" 처음담김");
+                checker = true;
+                addCart2(goods);
+            }else{
+                for(var i=0;i<cart.length;i++){
+                    if(goods == cart[i]){
+                        checker = true;
+                        console.log("goods :"+goods+", cart["+i+"] : "+cart[i]+" ture로 체인지");
+                        break;
+                    }else{
+                        console.log("goods :"+goods+", cart["+i+"] : "+cart[i]+" false로 체인지");
+                        checker = false;
+                    }
+                }
+            }           
+            
+            if(checker == false){
+                addCart2(goods);
+            }
+        }
+
+        function addCart2(goods){            
+            console.log(goods+" 담기");
+            cart.push(goods);
+            plusCounter();
+            showList();
+        }
+
+        function plusCounter(){
+            var counter = Number(document.getElementById('count').value);
+            console.log("counter : "+counter);
+            counter++;
+            document.getElementById('count').innerHTML = counter;
+        }
+
+        function showList(){
+            var list = "<ul>";
+            for(var i=0;i<cart.length;i++){
+                list += "<li>"+cart[i]+"<span class='close' id = "+i+">X</span></li>";
+            }
+            list += "</ul>";
+            document.getElementById('itemList').innerHTML = list;
+
+            var remove = document.querySelectorAll(".close");
+            for(var i=0;i<remove.length;i++){
+                remove[i].addEventListener("click",removeList);
+            }
+        } 
+        
+        function removeList(){
+            var id = this.getAttribute("id");
+            cart.splice(id,1);
+            showList();
+        }
+        
+    </script>
+    
+</body>
+</html>

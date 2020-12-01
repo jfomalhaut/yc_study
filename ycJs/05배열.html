@@ -1,0 +1,28 @@
+<html>
+    <header>
+        <style>
+
+        </style>
+    </header>
+<body>
+    <div class="items">
+        <button onclick="addCart('사과')">사과</button>
+        <button onclick="addCart('포도')">포도</button>
+        <button onclick="addCart('딸기')">딸기</button>
+        <button onclick="addCart('메론')">메론</button>
+        <button onclick="addCart('수박')">수박</button>
+        <!-- //addCart 함수를 만들것. -->
+    </div>
+    <h1>
+        <span>장바구니</span>
+        (<b id="count">0</b>)
+    </h1>
+    <ul id="cart">0</ul>
+    <script>
+        var count = document.getElementById('count');
+        count.innerHTML = '55';
+        //장바구니에 들어 있느 물건의 숫자. length를 이용.
+        //카트에 과일을 담는데 같은 과일이 또 담기면 안됨.
+    </script>
+</body>
+</html>
