@@ -1,0 +1,49 @@
+<html>
+<body>
+	<div class="container">
+		<input type="text" id="account" placeholder="insert ID"><br/>
+		<input type="password" id="password" placeholder="insert password"><br/>
+		<button id="login">Login</button>
+	</div>
+	<script src="./js/element.js"></script>
+	<script>
+
+		const ID = "test123";
+		const PWD = "pass1234";
+
+		var account = one('#account');
+		var password = one('#password');
+		var login = one('#login');
+
+		function onLogin() {
+			var accountValue = account.value;
+			var passwordValue = password.value;
+
+			if (accountValue === '' || passwordValue === '') {
+				alert('입력되지 않은 항목이 있습니다');
+				return;
+			}
+			
+			if (accountValue === ID && passwordValue === PWD) {
+				alert('로그인 성공!');
+			} else {
+				alert('로그인 실패!');
+				password.value = "";
+			}
+		}
+
+		function onKeyPress(e) {
+			if (e.keyCode === 13) {
+				onLogin();
+			}
+		}
+
+		login.addEventListener('click', onLogin);
+		account.addEventListener('keypress', onKeyPress);
+		password.addEventListener('keypress', onKeyPress);
+		// keypress
+		// keydown
+		// keyup
+	</script>
+</body>
+</html>

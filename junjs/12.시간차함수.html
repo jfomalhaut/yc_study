@@ -1,0 +1,18 @@
+<html>
+<body>
+	<button id="start">시작</button>
+
+	<script src="./js/element.js"></script>
+	<script>
+		var start = one('#start');
+
+		function onStart() {
+			setTimeout(function() {
+				alert('START!');
+			}, 1000);
+		}
+
+		start.addEventListener('click', onStart);
+	</script>
+</body>
+</html>

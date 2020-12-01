@@ -1,0 +1,32 @@
+<html>
+<body>
+	<ul id="list"></ul>
+	<script src="./js/element.js"></script>
+	<script>
+
+		var list = one('#list');
+		var items = [
+			{ id: 1, name: '오이', price: 1000 },
+			{ id: 2, name: '가지', price: 2000 },
+			{ id: 3, name: '당근', price: 3000 },
+			{ id: 4, name: '호박', price: 4000 }
+		];
+
+		var html = "", text = "";
+		var nf = new Intl.NumberFormat();
+	
+		for(var i in items) {
+			text = `
+				<li>
+					<b>${items[i].name}</b>
+					<span>(${nf.format(items[i].price)}원)</span>
+				</li>
+			`;
+			html += text;
+		}
+
+		list.innerHTML = html;
+
+	</script>
+</body>
+</html>

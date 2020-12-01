@@ -24,10 +24,43 @@
 	</h1>
 	<ul id="cart"></ul>
 	<script>
+		var cart = [];
+		var html = "", text = "";
 		var count = document.getElementById('count');
-		count.innerHTML = 999;
+		var cartElement = document.getElementById('cart');
+		// count.innerHTML = 999;
 		// 문제, cart에 과일을 담는데,
 		// 같은 과일이 또 담기면 안 됩니다.
+
+		function addCart(item) {
+			if (cart.indexOf(item) === -1) { // 카트에 현재 담으러는 상품이 없는 경우
+				cart.push(item);
+			} else {
+				alert('이미 담긴 상품입니다.');
+			}
+			print();
+		}
+
+		function print() {
+			html = "";
+			for(var i in cart) {
+				text = 
+					`<li>
+						<span>${cart[i]}</span>
+						<button onclick="removeItem('${cart[i]}')">삭제</button>
+					</li>`;
+				html += text;
+			}
+			count.innerHTML = cart.length;
+			cartElement.innerHTML = html;
+		}
+
+		function removeItem(item) {
+			var index = cart.indexOf(item);
+			cart.splice(index, 1);
+			print();
+		}
+
 	</script>
 </body>
 </html>

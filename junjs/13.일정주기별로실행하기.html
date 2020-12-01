@@ -1,0 +1,36 @@
+<html>
+<body>
+	<button id="start">시작</button>
+	<textarea id="inputForm" cols="30" rows="10"></textarea>
+
+	<script src="./js/element.js"></script>
+	<script>
+		var interval;
+		var start = one('#start');
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth() + 1;
+		var date = now.getDate();
+		var hour = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+
+		console.log(`${year}-${month}-${date} ${hour}:${min}:${sec}`);
+
+		function onStart() {
+			clearInterval(interval);
+			interval = setInterval(function() {
+				console.log('Hello');
+			}, 500);
+		}
+
+		start.addEventListener('click', onStart);
+
+		// 실시간 시간 날짜가 카운트 되는 화면 만들기.
+		// 추가) 한자리만 뜰 때에는 앞에 0을 붙이기.
+		// 인크루트 검사기 처럼 글자 수 50개까지 쓸 수 있는 폼 만들기
+		// textarea 태그 사용하기
+
+	</script>
+</body>
+</html>
