@@ -1,0 +1,34 @@
+<html>
+<body>
+    <button id="start">시작</button>
+    <script src="./js/element.js"></script>
+    <script>
+        var interval;
+        var start = one('#start');
+        var now = new Date();
+        console.log(now);
+
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var date = now.getDate();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+
+        console.log(`${year}-${month}-${date} ${hour}:${min}:${sec}`);
+
+        function onStart(){
+           clearInterval(interval);
+           interval = setInterval(function() {
+               console.log('Hello');
+           }, 1000)
+        }
+
+        start.addEventListener('click', onStart);
+
+        // 화면에 시간 카운트 계속되도록 만들어보기.
+        // 날자가 한 자리수일때 앞에 0을 붙여보기.
+        // 인크루드 검사기처럼 글자 수 50개까지 쓸 수 있는 폼 만들기. textarea.
+    </script>
+</body>
+</html>

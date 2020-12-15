@@ -1,0 +1,36 @@
+<html>
+<body>
+    <ul id="list"></ul>
+    <script src="./js/element.js"></script>
+    <script>
+        var list = one('#list');
+        var items = [
+            { id : 1, name : '오이', price : 1000},
+            { id : 2, name : '가지', price : 2000},
+            { id : 3, name : '당근', price : 3000},
+            { id : 4, name : '호박', price : 4000},
+        ];
+
+        var html = "", text="";
+        var nf = new Intl.NumberFormat();
+        for(var i in items) {
+            text = `
+            <li>
+                <b>${items[i].name}</b>
+                <span>(${nf.format(items[i].price)}원)</span>
+            </li>
+            `;
+            html += text;
+        }
+
+        list.innerHTML = html;
+    </script>
+</body>
+</html>
+
+<!--  cart와 다르게 이중배열을 사용하여 여러개 출력 -->
+
+<!-- for문을 사용해서 상품을 추가 삭제 수정 할건데 스크립트와 리엑트가 조금 사용방식이 다름
+concat, filter, map 그 부분에 대해 미리 배울 것임. -->
+
+<!-- 스크립트에 INDEX라는 개념이 있는데 그 부분을 잘 알아야 함. -->

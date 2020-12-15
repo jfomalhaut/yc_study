@@ -1,0 +1,56 @@
+<html>
+<body>
+    <div class="container">
+        <input type="text" id="account"><br/>
+        <input type="password" id="password" placeholder="insert password"><br/>
+        <button id="login">Login</button>
+    </div>
+    <script src="./js/element.js"></script>
+    <script>
+
+        const ID = "test123";
+        const PWD = "pass1234";
+
+        var account = one('#account');
+        var password = one('#password');
+        var login = one('#login');  
+
+        function onLogin(){
+            // console.log('Login');
+            var accountValue = account.value;
+            var passwordValue = password.value;
+            console.log(accountValue, passwordValue);
+
+            if(accountValue === '' || passwordValue === ''){
+                alert('항목이 입력되지 않았습니다.');
+                return; // 리턴을 쓰면 더 이상 밑의 코드 작동하지 않음.
+            }
+
+            if(accountValue === ID && passwordValue === PWD){
+                alert('로그인 성공!');
+            }else{
+                alert('로그인 실패');
+                password.value = "";
+            }
+        }        
+
+        function onKeyPress(e){ // 눌렀을대 모든 정보가 변수 e에 담김.
+            console.log(e);
+            if(e.keyCode === 13){ //엔터키 누르면 자동으로 로그인 함수 실행.
+                onLogin();
+            }
+        }
+
+        function onKeyPress(e){ // 눌렀을대 모든 정보가 변수 e에 담김.
+            console.log(e);
+            if(e.keyCode === 13){ //엔터키 누르면 자동으로 로그인 함수 실행.
+                onLogin();
+            }
+        }
+        
+        login.addEventListener('click', onLogin);
+        account.addEventListener('keypress', onKeyPress);
+        password.addEventListener('keypress', onKeyPress);  
+    </script>
+</body>
+</html>

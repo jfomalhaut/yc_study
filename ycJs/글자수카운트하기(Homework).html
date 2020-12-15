@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script src="./js/element.js"></script>
+</head>
+<body>
+    <div class="container">
+        <textarea name="ta" id="textCount" cols="30" rows="10"></textarea>        
+    </div>
+    <script>
+        // var letterCount = one("#textCount");        
+        // letterCount.onchange = check;
+        
+        // function check(){
+        //     alert("글자가 입력되었습니다.");
+        //     if(letterCount.value.length>50){
+        //         alert("글자가 50글자를 넘었습니다.!");                
+        //     }
+        // }
+
+        function onKeyPress(){
+            // alert("키보드 눌림");
+            var letterCount = one("#textCount");
+            if(letterCount.value.length>50){
+                alert("글자가 50글자를 넘었습니다.");
+            }
+        }
+
+        textCount.addEventListener('keypress',onKeyPress);
+    </script>
+</body>
+</html>
