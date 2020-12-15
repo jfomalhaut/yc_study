@@ -1,0 +1,4 @@
+
+
+map, filter, concat dotdotdot 개념 익히기
+슬라이드 구현(2가지)

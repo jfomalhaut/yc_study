@@ -1,0 +1,48 @@
+<html>
+<body>
+    <button id="start">시작</button>
+    <div id="counter"></div>
+    <script src="./js/element.js"></script>
+    <script>
+        var interval;
+		  var start = one('#start');
+		  var now, year, month, houre, min, sec;
+        
+        function onStart(){
+            clearInterval(interval);
+            intervar = setInterval(function(){
+                now = new Date();
+                year = now.getFullYear();
+                month = zero(now.getMonth()+1);
+                date = zero(now.getDate());
+                hour = zero(now.getHours());
+                min = zero(now.getMinutes());
+                sec = zero(now.getSeconds());
+                
+               //  if(month <=9 ){
+               //      month ="0"+month;
+               //  }
+
+               //  if(date <=9 ){
+               //      date ="0"+date;
+               //  }
+                
+                // console.log(`${year}-${month}-${date} ${hour}:${min}:${sec}`);                
+                counter.innerHTML=`${year}-${month}-${date} ${hour}:${min}:${sec}`;                
+            },1000)
+		  }
+		  
+		  function zero(num) {
+				if(num <= 9){
+					num = "0"+num;
+					return num;
+				} else {
+					return num;
+				}
+		  }
+
+        start.addEventListener('click', onStart);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<style>
+		li {
+			font-size: 30px;
+			cursor: pointer;
+			margin: 15px 0;
+		}
+		.active {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="active">menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+	<script src="./js/element.js"></script>
+	<script>
+		var list = all('li'); // 배열로 들어간다
+
+		list.forEach(function(element, i) {
+			element.addEventListener('click', function() {
+				console.log(i, '번째 list태그');
+				activeList(i);
+			});
+		});
+
+		function activeList(index) {
+			removeAllClass();
+			list[index].classList.add('active');
+		}
+
+		function removeAllClass() {
+			list.forEach(function(element, i) {
+				element.classList.remove('active');
+			});
+		}
+
+		// 숙제: 서브웨이 메인배너에 있는
+		// pagination bullet 버튼 만들어보기
+
+	</script>
+</body>
+</html>
