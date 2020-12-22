@@ -1,0 +1,29 @@
+<html>
+<body>
+	<script>
+		var products = [
+			{ id: 1, name: '사과1', type: 'fruit' },
+			{ id: 1, name: '사과2', type: 'fruit' },
+			{ id: 1, name: '사과3', type: 'fruit' },
+			{ id: 1, name: '사과4', type: 'fruit' },
+			{ id: 1, name: '야채1', type: 'vegetable' },
+			{ id: 1, name: '야채2', type: 'vegetable' },
+			{ id: 1, name: '야채3', type: 'vegetable' },
+			{ id: 1, name: '생선1', type: 'fish' },
+			{ id: 1, name: '생선2', type: 'fish' },
+			{ id: 1, name: '생선3', type: 'fish' },
+			{ id: 1, name: '생선4', type: 'fish' }
+		];
+
+		var newArr = products.reduce((acc, cur, idx) => {
+			return {
+				...acc,
+				[cur.type]: acc[cur.type] ? [ ...acc[cur.type], cur ] : [ cur ] 
+			}
+		}, {});
+
+		console.log(newArr);
+
+	</script>
+</body>
+</html>

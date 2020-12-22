@@ -1,0 +1,35 @@
+<html>
+<body>
+	<script>
+
+		var cart = [
+			{ name: '사과', count:1, id:1, price: 3000, check: true },
+			{ name: '귤', count:1, id:1, price: 3000, check: false },
+			{ name: '포도', count:1, id:1, price: 3000, check: false },
+			{ name: '자두', count:1, id:1, price: 3000, check: true }
+		];
+
+		var cart2 = cart.map((item, index) => {
+			if (item.name === '포도') {
+				return { ...item, check: false };
+			} else {
+				return item;
+			}
+		});
+
+		console.log(cart2);
+
+		var player = {
+			name: '손흥민',
+			team: '토트넘',
+			number: 7,
+			height: 182
+		};
+
+		var newPlayer = { ...player, weight: 70, team: '멘체스터 유나이티드' };
+		console.log(newPlayer);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+	<script>
+
+		// 철수 => 경수로 변경
+		var team = ['민수', '철수', '영수'];
+		var newTeam = team.map(item => {
+			if (item === '철수') {
+				return '경수';
+			} else {
+				return item;
+			}
+		});
+
+		var newTeam2 = team.map(item => item === '철수' ? '경수' : item );
+		// 조건 ? 참 : 거짓
+		// 조건 ? 참 : 조건 ? 참 : 거짓
+
+		console.log(newTeam2);
+
+	</script>
+</body>
+</html>

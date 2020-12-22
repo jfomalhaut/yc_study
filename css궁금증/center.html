@@ -1,0 +1,76 @@
+<html>
+<haed>
+	<style>
+		.container {
+			background: #ddd;
+			height: 600px;
+			text-align: center;
+		}
+
+		.box {
+			display: inline-block;
+			background: #444;
+			width: 200px;
+			height: 200px;
+		}
+
+		.box2 {
+			display: block;
+			background: #444;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+
+		.container2 {
+			background: #ddd;
+			height: 600px;
+			text-align: center;
+			position: relative;
+		}
+
+		.container2:before {
+			content: '';
+			top: 0;
+			left: 50%;
+			height: 100%;
+			width: 1px;
+			background: blue;
+			position: absolute;
+		}
+
+		.container2:after {
+			content: '';
+			left: 0;
+			top: 50%;
+			width: 100%;
+			height: 1px;
+			background: blue;
+			position: absolute;
+		}
+
+		.box3 {
+			background: #444;
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%); 
+			/* margin-top: -100px;
+			margin-left: -100px; */
+		}
+
+	</style>
+</haed>
+<body>
+	<!-- <div class="container">
+		<div class="box"></div>
+	</div> -->
+	<!-- <div class="box2"></div> -->
+
+	<div class="container2">
+		<div class="box3"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+	<script>
+
+		// 문제) check가 되지 않은 상품만 남겨 보세요 (선택삭제를 했을 때)
+
+		var cart = [
+			{ name: '사과', check: true },
+			{ name: '귤', check: false },
+			{ name: '포도', check: false },
+			{ name: '자두', check: true }
+		];
+
+		var cart2 = cart.filter(item => !item.check);
+
+		console.log(cart2);
+
+
+	</script>
+</body>
+</html>

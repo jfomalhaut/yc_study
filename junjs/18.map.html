@@ -1,0 +1,45 @@
+<html>
+<body>
+	<script>
+		
+		// map 수정과 관련이 있다.
+
+		// 우리가 갖고 있는 이 배열을
+		// 반복문을 이용해서
+		// 각수에 x10을 해서 새로운 변수에 넣어보세요.
+
+		// 1. 새로 담을 빈 배열을 만들어준다.
+		// 2. 반복문을 이용해 각 요소에 x10을 해준다.
+		// 3. push로 담는다.
+
+		var arr = [1, 2, 3, 4, 5];
+		var arr2 = [];
+
+		for (var i in arr) {
+			arr2.push(arr[i] * 10);
+		}
+
+		var arr3 = arr.map(function(item, index) {
+			return item * 10;
+		});
+
+		var arr4 = arr.map(item => item * 10);
+		var arr5 = arr.map(item => {
+			return item * 10;
+		});
+
+		// function test() {
+
+		// }
+
+		// const test = () => {
+
+		// }
+
+		// console.log(arr4);
+
+
+
+	</script>
+</body>
+</html>
