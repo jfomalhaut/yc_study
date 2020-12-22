@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style>
+        li{
+            font-size: 30px;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+        .active{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="active">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+    <script src="./js/element.js"></script>
+    <script>
+        var list = all('li'); //배열로 들어간다.
+        // console.log(list[0]);
+        list.forEach((element,i) => {
+            element.addEventListener('click', function() {
+                console.log(i,'번재 list태그');
+                activeList(i);
+            });
+            
+        });
+
+        function activeList(index){
+            removeAllClass();
+            list[index].classList.add('active'); //요소에 active라는 클래스 추가.
+        }
+
+        function removeAllClass(){
+            list.forEach(function(element,i){
+                element.classList.remove('active');
+            });
+        }
+
+        //서브웨이 홈페이지 상단에 있는 광고판 순환버튼 만들어보기.
+
+    </script>
+</body>
+</html>

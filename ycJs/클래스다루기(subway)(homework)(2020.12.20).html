@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>서브웨이 예제</title>
+    <style>
+        .container1{
+            margin-top: 20px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .container2{
+            color: black;
+            width: 900px;
+            margin:0 auto;                     
+        }
+/* 궁금증 900px라고 하면 가운데 정렬이 되는데 왜 숫자가 더 커져버리면 가운데 정렬이 되지 않는지? */
+
+        .menu{
+            float:left;
+            text-align: center;
+        }
+
+        .menu li{
+            list-style-type: none;            
+            margin-left: 45px;
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center; 
+            cursor: pointer;                     
+        }
+
+        .active{
+            color: red;           
+        }
+
+        /* .container1 img{
+            display: inline;
+        } */
+
+        .noShow{
+            display: none;            
+        }
+
+       
+
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <!-- <img src="./image/logo.png" alt="Logo" > -->
+    </div>
+     <div class="container2">         
+        <ul class="menu">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li>메뉴5</li>
+            <li>메뉴6</li>            
+            <li>메뉴7</li>            
+        </ul>                 
+    </div>
+    <!-- <div class="container3">
+        <img src="./image/image0.jpg" alt="image0" class="noShow">
+        <img src="./image/image1.jpg" alt="image1" class="noShow">
+        <img src="./image/image2.jpg" alt="image2" class="noShow">
+        <img src="./image/image3.jpg" alt="image3" class="noShow">
+        <img src="./image/image4.jpg" alt="image4" class="noShow">
+        <img src="./image/image5.jpg" alt="image5" class="noShow">
+        <img src="./image/image6.jpg" alt="image6" >
+    </div>     -->
+          
+
+        <img src="./image/image0.jpg" alt="image0" class="noShow">
+        <img src="./image/image1.jpg" alt="image1" class="noShow">
+        <img src="./image/image2.jpg" alt="image2" class="noShow">
+        <img src="./image/image3.jpg" alt="image3" class="noShow">
+        <img src="./image/image4.jpg" alt="image4" class="noShow">
+        <img src="./image/image5.jpg" alt="image5" class="noShow">
+        <img src="./image/image6.jpg" alt="image6" >  
+   
+     
+    <script src="./js/element.js"></script>
+    <script>
+        var list = all('li');
+        var imgList = all('img');
+        // var imgList = all('.container3'); 만일 이렇게 하면 container3 전체를 하나의 배열로 인식하는지?
+        // 의도했던 것은 container3의 요소 하나하나를 각각의 배열의 요소로 하고자 했던 것. 근데 안됨.
+        // 클래스안의 요소 전체를 하나의 배열이 아닌 각각의 배열로 받을 수 있는 방법이 있는지
+
+        list.forEach(function(element, i){
+            element.addEventListener('click', function(){
+                console.log(i,'번째 list태그');
+                activeList(i);
+            });
+        });
+
+        function activeList(index){
+            removeAllClass();
+            list[index].classList.add('active');
+            //모든 그림 다 noShow하기
+            imgList.forEach(function(element,i){
+                console.log(i,'매개변수로 noShowList삭제 예정');
+                noShowList(i);
+            });
+            //인덱스에 해당하는 그림만 noShow제거
+            removeNoshow(index);
+        }
+
+        function noShowList(index){    
+            console.log(index,'noShowList 호출');       
+            imgList[index].classList.add('noShow');
+        }
+
+        function removeAllClass(){
+            list.forEach(function(element, i){
+                element.classList.remove('active');
+            });
+        }
+
+        function removeNoshow(index){       
+            console.log(index,'에 해당하는 그림 보여줍시다.');
+            imgList[index].classList.remove('noShow');            
+        }
+    </script>
+</body>
+</html>

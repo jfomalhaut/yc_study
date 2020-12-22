@@ -1,0 +1,95 @@
+<html>
+<head>
+    <style>
+        .container {
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+        .banner {
+            height: 400px;
+            position: absolute;
+            left: 0; top:0;
+            width: 100%;
+            opacity: 0;
+            transition: .4s;
+            font-size: 120px;
+            color: white;
+            font-weight: bold;
+            line-height: 400px;
+            text-align: center;
+        }
+        .banner:nth-child(1){background-color: olivedrab;}
+        .banner:nth-child(2){background-color: darkgoldenrod;}
+        .banner:nth-child(3){background-color: darkred;}
+        .banner:nth-child(4){background-color: lightcoral;}
+        .banner:nth-child(5){background-color: darkslategrey;}
+
+        .active {
+            opacity : 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner active">1</div>
+        <div class="banner ">2</div>
+        <div class="banner ">3</div>
+        <div class="banner ">4</div>
+        <div class="banner ">5</div>
+    </div>
+    <button id="prev">이전</button>
+    <button id="next">다음</button>
+    <button id="auto">자동플레이</button>
+    <button id="pause">정지</button>
+
+    <script src="./js/element.js"></script>
+    <script>
+
+        var index = 0;
+        var next = one('#next');
+        var prev = one('#prev');
+        var auto = one('#auto');
+        var pause = one('#pause');
+        var banners = all('.banner');
+        var length = banners.length;
+        var interval;                
+
+        function onNext(){
+            banners[index].classList.remove('active');
+            index++;
+            index = index % length;
+            banners[index].classList.add('active');
+        }
+
+        function onPrev(){
+            banners[index].classList.remove('active');
+            index--;
+            if(index<0){
+                index = length-1;
+            }
+            banners[index].classList.add('active');
+        }
+
+        function onAuto(){
+            clearInterval(interval); 
+            // 이함수 음영처리해도 일단은 잘 작동함. 애 역활을 무엇?
+            intervar = setInterval(onNext,1000);           
+            
+        }
+
+        function onPause(){
+            clearInterval(interval);
+            intervar = setInterval(onPrev,1000);           
+            
+        }
+
+        next.addEventListener('click',onNext);
+        prev.addEventListener('click',onPrev);
+        auto.addEventListener('click',onAuto);
+        pause.addEventListener('click',onPause);
+
+    </script>
+    
+</body>
+</html>
