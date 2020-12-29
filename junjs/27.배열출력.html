@@ -1,0 +1,30 @@
+<html>
+<head>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="list"></div>
+	<script>
+		var list = document.getElementById('list');
+		var items = [
+			{ id: 1, name: '오이', price: 1000 },
+			{ id: 2, name: '가지', price: 2000 },
+			{ id: 3, name: '당근', price: 3000 },
+			{ id: 4, name: '호박', price: 4000 }
+		];
+		console.log(print());
+		list.innerHTML = print();
+
+		function print() {
+			return items.map(item => `
+				<div class="item">
+					<div>${item.name}</div>
+					<div>${item.price}원</div>
+				</div>
+			`);
+		}
+	</script>
+</body>
+</html>

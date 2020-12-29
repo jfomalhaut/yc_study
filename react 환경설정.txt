@@ -1,0 +1,21 @@
+1. package.json 생성
+	$ npm init -y
+
+2. webpack.config.js를 구현
+	- 어떻게 압축하고 구동할지에 대한 내용을 정의
+
+3. npm으로 package설치
+	[webpack 관련]
+	$ npm i -D webpack webpack-cli webpack-dev-server
+
+	[babel 관련]
+	$ npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react
+
+	[react 관련]
+	$ npm i -s react react-dom react-router-dom
+
+4. package.json에서 
+	1)babel설정
+	2)script 설정
+
+5. entry파일인 index.js와 output파일 index.html을 작성해준다.
