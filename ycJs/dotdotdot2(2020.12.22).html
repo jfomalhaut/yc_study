@@ -1,0 +1,43 @@
+<html>
+<body>
+    <script>
+
+    var cart = [
+    {name : '사과' , check : true},
+    {name : '귤' , check : false},
+    {name : '포도' , check : false},
+    {name : '자두' , check : true},
+    ];
+
+
+    var cart2 = cart.map(item =>{
+        if(item.name === '포도'){
+            return {...item, check : true};
+        }else{
+            return item;
+        }        
+    });
+
+    console.log(cart2);
+
+
+
+
+    var player = {
+        name : '손흥민',
+        team : '토트넘',
+        number : 7,
+        height : 182
+    };
+
+    var newPlayer = {...player, weight : 70, team : '맨유'};
+    console.log(newPlayer);
+
+
+
+
+    </script>
+    
+
+</body>
+</html>

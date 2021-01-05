@@ -1,0 +1,17 @@
+<html>
+<body>
+    <script>
+        var cart = [
+            {name : '사과' , check : true},
+            {name : '귤' , check : false},
+            {name : '포도' , check : false},
+            {name : '자두' , check : true},
+        ];
+
+        var cart2= cart.filter(item => item.check === false);
+        console.log(cart2);
+
+       
+    </script>
+</body>
+</html>

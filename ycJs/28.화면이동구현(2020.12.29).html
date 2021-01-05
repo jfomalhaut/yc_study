@@ -1,0 +1,73 @@
+<html>
+<head>
+    <style>
+        header{
+            width: 100%;
+            border-bottom: 1px solid;
+        }
+        ul {
+            display: flex;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 20px;
+            list-style: none;
+            margin : 0;
+            font-size: 30px;
+        }
+
+        li:hover {
+            color : blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li onclick="route(1)">page1</li>
+            <li onclick="route(2)">page2</li>
+            <li onclick="route(3)">page3</li>
+            <li onclick="route(4)">page4</li>
+            <li onclick="route(5)">page5</li>           
+        </ul>
+    </header>
+    <div id="container"></div>
+    <script>
+
+        var container = document.getElementById('container');
+
+        function onPage(page){
+            container.innerHTML = page;
+        }
+
+        function route(type){
+            switch(type){
+                case 1: onPage(page1()); break;
+                case 2: onPage(page2()); break;
+                case 3: onPage(page3()); break;
+                case 4: onPage(page4()); break;
+                case 5: onPage(page5()); break;
+            }
+        }
+
+        function page1() {
+            return `<h1>Page 1 Component</h1>`;
+        }
+        function page2() {
+            return `<h1>Page 2 Component</h1>`;
+        }
+        function page3() {
+            return `<h1>Page 3 Component</h1>`;
+        }
+        function page4() {
+            return `<h1>Page 4 Component</h1>`;
+        }
+        function page5() {
+            return `<h1>Page 5 Component</h1>`;
+        }
+    </script>
+</body>
+</html>
